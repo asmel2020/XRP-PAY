@@ -18,6 +18,8 @@
 
 <a href="https://ibb.co/QbcnTf6"><img src="https://i.ibb.co/VjNDztv/Captura-de-tela-2024-01-21-150531.png" alt="Captura-de-tela-2024-01-21-150531" border="0" /></a>
 <a href="https://ibb.co/Pr0wQ8y"><img src="https://i.ibb.co/YNwpZGS/Captura-de-tela-2024-01-21-150546.png" alt="Captura-de-tela-2024-01-21-150546" border="0" /></a>
+<br />
+<br />
 XRP PAY ha sido diseñado para simplificar la compra
 de productos digitales mediante un proceso eficiente
 y seguro. A través de un enlace de pago único, los usuarios
