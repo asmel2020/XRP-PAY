@@ -1,0 +1,91 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id           String     @id @default(uuid())
+  email        String     @unique
+  password     String
+  amount       String     @default("0")
+  isActive     Boolean    @default(true)
+  iswithdrawal Boolean    @default(true)
+  role         Role       @default(USER)
+  payments     Payments[]
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
+}
+
+model Payments {
+  id          String         @id @default(uuid())
+  status      PaymentsStatus @default(ACTIVATED)
+  value       String
+  concepto    String
+  user        User?          @relation(fields: [userId], references: [id])
+  userId      String?
+  address     Address?       @relation(fields: [addressId], references: [id])
+  addressId   String?
+  transacions Transacions?
+  createdAt   DateTime       @default(now())
+  updatedAt   DateTime       @updatedAt
+}
+
+enum Role {
+  ADMIN
+  USER
+}
+
+enum PaymentsStatus {
+  COMPLETE
+  ACTIVATED
+  CANCELLED
+}
+
+//common
+model Address {
+  id          String     @id @default(uuid())
+  address     String     @unique
+  isAvailable Boolean    @default(true)
+  isActive    Boolean    @default(true)
+  payments    Payments[]
+  path        String
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+}
+
+model Transacions {
+  id              String   @id @default(uuid())
+  transacionshash String   @unique
+  hash            String   @unique
+  blockNumber     Int
+  from            String
+  to              String
+  value           String
+  payments        Payments? @relation(fields: [paymentsId], references: [id])
+  paymentsId      String?   @unique // relation scalar field (used in the `@relation` attribute above)
+  isProcessed     Boolean  @default(false)
+  isConfirmed     Boolean  @default(false)
+  isHarvest       Boolean  @default(false)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+// listener
+model BlockNumber {
+  id          String @id @default(uuid())
+  blockNumber Int
+  chainId     String
+}
+
+model lastBlockNumber {
+  id                  String @id @default(uuid())
+  blockNumber         Int
+  chainId             String @unique
+  typeLastBlockNumber String @default("MONITOR")
+}

@@ -1,0 +1,74 @@
+version: "2"
+
+services:
+  ## Data Base
+  db:
+    image: postgres:15.4
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    container_name: postgres
+    mem_reservation: 512M
+    mem_limit: 1G
+    networks:
+      brige:
+        aliases:
+          - db
+
+  ## back-end monit transcion
+  back-end:
+    build: ./back-end/
+    ports:
+      - "8000:8000"
+    environment:
+      PORT: 8000
+      JWT_SECRET: 14589632
+      JWT_EXPIRES_IN: 1d
+      DATABASE_URL: postgresql://postgres:postgres@db:5432/postgres?schema=public
+      PROVIDER: http://node:8545
+      CONTRACT_ADDRESS: 0x5FbDB2315678afecb367f032d93F642f64180aa3
+    networks:
+      brige:
+        aliases:
+          - back-end
+    depends_on:
+      - db
+      
+  back-end:
+    build: ./back-end/
+    ports:
+      - "8000:8000"
+    environment:
+      PORT: 8000
+      JWT_SECRET: 14589632
+      JWT_EXPIRES_IN: 1d
+      DATABASE_URL: postgresql://postgres:postgres@db:5432/postgres?schema=public
+      PROVIDER: http://node:8545
+      CONTRACT_ADDRESS: 0x5FbDB2315678afecb367f032d93F642f64180aa3
+    networks:
+      brige:
+        aliases:
+          - back-end
+    depends_on:
+      - db
+  ## client web
+  client:
+    build: ./client/
+    ports:
+      - "80:80"
+    environment:
+      VITE_BASE_URL: http://back-end:8000
+    networks:
+      brige:
+        aliases:
+          - client
+    depends_on:
+      - db
+      - back-end
+
+networks:
+  brige:
