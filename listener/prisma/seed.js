@@ -1,31 +1,28 @@
-const { PrismaClient } = require('@prisma/client')
+require('dotenv').config();
 
-const prisma = new PrismaClient()
+const { PrismaClient } = require('@prisma/client');
+const prisma = new PrismaClient();
 const ethers = require('ethers');
 
-
 async function main() {
-  const Mnemonic = 'remove scheme silver sugar text circle salt manage long little sword amount';
+  const Mnemonic = process.env.PHRASE_HD_WALLET;
 
   const wallets = ethers.Mnemonic.fromPhrase(Mnemonic);
 
-  let address= [];
+  let address = [];
 
   for (let index = 0; index < 999; index++) {
     let wallet = ethers.HDNodeWallet.fromMnemonic(
       wallets,
       `m/44'/60'/0'/0/${index}`,
     );
-    address.push({address: wallet.address,path: wallet.path});
+    address.push({ address: wallet.address, path: wallet.path });
   }
 
   await prisma.address.createMany({
     data: address,
     skipDuplicates: true,
   });
-
-  
- 
 }
 main()
   .then(async () => {

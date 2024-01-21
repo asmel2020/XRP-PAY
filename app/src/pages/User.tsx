@@ -19,10 +19,10 @@ export const User = () => {
     user,
     {
       refreshInterval: 10000,
-      onSuccess(data, key, config) {
+      onSuccess() {
        
       },
-      onError(e) {
+      onError() {
 
         Cookies.remove("token");
         setLocation("/login");

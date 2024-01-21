@@ -22,6 +22,7 @@ import toast from "react-hot-toast";
 import { ModalCreatePay } from "../ModalCreatePay";
 import { ethers } from "ethers";
 import { ModalWithdrawal } from "../ModalWithdrawal";
+
 const TABLE_HEAD = [, "Value", "Status", "Concepto", "Created At", "Link"];
 const colorStatus: any = {
   ACTIVATED: "blue",
@@ -34,14 +35,17 @@ interface Props {
 }
 
 export function Table({ payment }: Props) {
+  
   const handelCopy = () => {
     toast.success("Successfully Copy Link");
   };
+
   const [openCreatePay, setOpenCreatePay] = useState(false);
   const handleOpenCreatePay = () => setOpenCreatePay(!openCreatePay);
 
   const [openWithdrawal, setOpenWithdrawal] = useState(false);
   const handleOpenWithdrawal = () => setOpenWithdrawal(!openWithdrawal);
+
   return (
     <>
       <ModalCreatePay handleOpen={handleOpenCreatePay} open={openCreatePay} />
@@ -170,8 +174,8 @@ export function Table({ payment }: Props) {
                         <Tooltip content="Copy Link">
                           <CopyToClipboard
                             text={`${
-                              import.meta.env.VITE_URL_APP
-                            }/payment/${id}`}
+                              window.location.href
+                            }payment/${id}`}
                             onCopy={handelCopy}
                           >
                             <IconButton placeholder={""} variant="text">
