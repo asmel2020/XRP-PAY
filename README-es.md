@@ -6,7 +6,7 @@
   <h3 align="center">XRP PAY</h3>
 
   <p align="center">
-    A system that simplifies the collection of payments for digital products and e-commers using payment links!
+    Un sistema que simplifica la recaudación de pagos para productos digitales y e-commers mediante enlaces de pago!
     <br />
     <br />
     <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
@@ -20,37 +20,37 @@
 <a href="https://ibb.co/Pr0wQ8y"><img src="https://i.ibb.co/YNwpZGS/Captura-de-tela-2024-01-21-150546.png" alt="Captura-de-tela-2024-01-21-150546" border="0" /></a>
 <br />
 <br />
-XRP PAY has been designed to simplify purchasing
-of digital products through an efficient process
-and sure. Through a single payment link, users
-They can purchase digital products instantly,
-taking advantage of the speed and security provided by
-the SIDE-EVM of XRP.
+XRP PAY ha sido diseñado para simplificar la compra
+de productos digitales mediante un proceso eficiente
+y seguro. A través de un enlace de pago único, los usuarios
+pueden adquirir productos digitales de forma instantánea,
+aprovechando la velocidad y seguridad proporcionadas por
+la SIDE-EVM de XRP.
 
-## Specific characteristics
+Características Específicas:
 
-* <b>Custom Payment Link:</b> Sellers generate links
-  Custom payment options for each digital product
-  that they want to sell. These links contain all the
-  information necessary to complete the transaction,
-  including the amount, product description and
-  the address of the recipient.
+* <b>Enlace de Pago Personalizado:</b> Los vendedores generan enlaces
+  de pago personalizados para cada producto digital
+  que desean vender. Estos enlaces contienen toda la
+  información necesaria para completar la transacción,
+  incluyendo el monto, la descripción del producto y
+  la dirección del destinatario.
 
-* <b>Instant Confirmation:</b> When you click the link
-  payment, buyers are directed to an intuitive interface
-  of XRP PAY showing the details of the transaction. The SIDE-EVM
-  of XRP allows for almost instant confirmation of the transaction,
-  facilitating a shopping experience without delays.
+* <b>Confirmación Instantánea:</b> Al hacer clic en el enlace
+  de pago, los compradores son dirigidos a una interfaz intuitiva
+  de XRP PAY que muestra los detalles de la transacción. La SIDE-EVM
+  de XRP permite una confirmación casi instantánea de la transacción,
+  facilitando una experiencia de compra sin demoras.
 
-* <b>XRP Support:</b> XRP PAY uses cryptocurrency
-  XRP to process payments for digital products. The SIDE-EVM
-  of XRP guarantees efficient and secure execution of transactions
-  on the XRP blockchain.
+* <b>Compatibilidad con XRP:</b> XRP PAY utiliza la criptomoneda
+  XRP para procesar los pagos de productos digitales. La SIDE-EVM
+  de XRP garantiza una ejecución eficiente y segura de las transacciones
+  en la cadena de bloques de XRP.
 
-* <b>Advanced Security:</b> The XRP SIDE-EVM provides an environment
-  insurance for the execution of smart contracts, ensuring the
-  integrity of transactions and protecting both buyers
-  as sellers against fraud.
+* <b>Seguridad Avanzada:</b> La SIDE-EVM de XRP proporciona un entorno
+  seguro para la ejecución de contratos inteligentes, asegurando la
+  integridad de las transacciones y protegiendo tanto a compradores
+  como a vendedores contra fraudes.
 
 
 ### Built With
@@ -62,14 +62,19 @@ the SIDE-EVM of XRP.
 <!-- GETTING STARTED -->
 ## Getting Started
 
+
+
 ### Prerequisites
 
-To run the demo, it is necessary to have the following programs installed:
+Para ejecutar la demostración, es necesario contar con la instalación de los siguientes programas:
 
 * docker
 * docker compose
 
 ### Installation
+
+_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+
 
 1. Clone the repo
    ```sh
@@ -82,36 +87,36 @@ To run the demo, it is necessary to have the following programs installed:
    ```
 
 <!-- USAGE EXAMPLES -->
-## How does it work
+## Cómo Funciona
 
-  - <b>Generation of the Payment Link</b>
-      - The seller enters the details of the digital product on the XRP PAY platform.
-      - The platform generates a unique payment link that includes the product description, amount, and seller address.
-  - <b>Share the Link</b>
-      - The seller shares the payment link with the buyer through various channels, such as social networks, emails or instant messaging.
-  - <b>Click on the Link</b>
-      - The buyer clicks on the payment link, being redirected to the XRP PAY interface.
-  - <b>Transaction Confirmation:</b>
-      - XRP's SIDE-EVM processes the transaction almost instantaneously.
-      - Both parties (buyer and seller) receive immediate confirmation of the transaction.
-  - <b>Digital Product Delivery</b>
-      - Once payment is confirmed, the seller can provide the buyer with access to the digital product.
+  - <b>Generación del Enlace de Pago:</b>
+      - El vendedor ingresa los detalles del producto digital en la plataforma XRP PAY.
+      - La plataforma genera un enlace de pago único que incluye la descripción del producto, el monto y la dirección del vendedor.
+  - <b>Compartir el Enlace:</b>
+      - El vendedor comparte el enlace de pago con el comprador a través de diversos canales, como redes sociales, correos electrónicos o mensajería instantánea.
+  - <b>Clic en el Enlace:</b>
+      - El comprador hace clic en el enlace de pago, siendo redirigido a la interfaz de XRP PAY.
+  - <b>Confirmación de la Transacción:</b>
+      - La SIDE-EVM de XRP procesa la transacción de manera casi instantánea.
+      - Ambas partes (comprador y vendedor) reciben una confirmación inmediata de la transacción.
+  - <b>Entrega del Producto Digital:</b>
+      - Una vez confirmado el pago, el vendedor puede proporcionar al comprador acceso al producto digital.
 
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Create event listener
-- [x] Create Backend
-- [x] Create Administrative Panel
-- [x] Create payment link
-- [ ] Create a system to track payments in a friendlier way
-- [ ] Add notification system
-- [ ] Improve security system for withdrawal
+- [x] Crear listener de eventos
+- [x] Crear Back-end
+- [x] Crear Panel Administrativo
+- [x] Crear Link de pago
+- [ ] Crear sistema para rastrear los pagos de una foma mas amigable
+- [ ] Agregar sistema de notificaciones
+- [ ] Mejorar sistema de seguridad para retiro
 
 <!-- CONTACT -->
 ## Contact
 
-<b>Danny gonzalez</b>
+Danny gonzalez
  - X : [@DJGG2019](https://twitter.com/DJGG2019)
  - Email: jesusgalicia2019@gmail.com
 - Linkedin : [Danny Gonzalez](https://www.linkedin.com/in/danny-gonzalez-974763219/)
